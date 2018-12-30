@@ -1,1 +1,1 @@
-worker: python superior.py
+worker: python video.py

@@ -126,4 +126,4 @@ async def on_message(message):
     if message.content.startswith('!watsup'):
         randomlist = [good,wat about you]
         await client.send_message(message.channel,(random.choice(randomlist)))
-client.run('NTI4NTA0MzMyMjYyMzA5ODg4.DwjdtQ.u4FCOBy47ISfeE61-fnRjJVV1AQ')
+client.run('NTI4NTA0MzMyMjYyMzA5ODg4.DwoD7A.ckYWri-lEriTcHNAsupTOxD5a94')

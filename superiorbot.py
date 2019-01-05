@@ -22,7 +22,7 @@ async def on_member_join(member):
     await client.send_message(member, 'Hello,I Hope You Will like Our Server')
     print('Sent message to ' + member.name)
     await client.change_presence(game=Game(name='Playing Fortnite'))
-    await client.change_presence(game=Game(name='fortnite'))
+    await client.change_presence(game=Game(name='Fortnite'))
     print('Ready') 
 
 
@@ -78,5 +78,19 @@ async def on_message(message):
        await client.delete_message(message)
     if ('subs4subs') in message.content:
        await client.delete_message(message)
+    if message.content == '!trool me':
+        em = discord.Embed(description='LOL')
+        em.set_image(url='https://cdn.discordapp.com/attachments/528873517157056532/530968846635630609/Troll_face.png')
+        await client.send_message(message.channel, embed=em)
+    if message.content == '!lol':
+        em = discord.Embed(description='Laugh Out Laugh')
+        em.set_image(url='https://cdn.discordapp.com/attachments/528873517157056532/530968826838515713/meme-png-me-gusta-meme-png-png-image-997.png')
+        await client.send_message(message.channel, embed=em)
+    if message.content == '!superior army':
+        em = discord.Embed(description='Laugh Out Laugh')
+        em.set_image(url='https://cdn.discordapp.com/attachments/528873517157056532/530968875052040242/Untitled-1.png')
+        await client.send_message(message.channel, embed=em)
+    if message.content.startswith('!what rup is doing'):
+        randomlist = ['Nothing','Creating Video','Free']
+        await client.send_message(message.channel,(random.choice(randomlist)))
 client.run('NTI4NTA0MzMyMjYyMzA5ODg4.DwoIKQ.P9HY47BQ3wD5BtZz3JH6kUzOtwA')
-

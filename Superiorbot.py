@@ -93,4 +93,4 @@ async def on_message(message):
     if message.content.startswith('!what rup is doing'):
         randomlist = ['Nothing','Creating Video','Free']
         await client.send_message(message.channel,(random.choice(randomlist)))
-client.run('NTI4NTA0MzMyMjYyMzA5ODg4.DwoIKQ.P9HY47BQ3wD5BtZz3JH6kUzOtwA')
+client.run('NTI4NTA0MzMyMjYyMzA5ODg4.Dx4xUg.X4C_wsn7gAQsL-geXxitpkr1dkc')

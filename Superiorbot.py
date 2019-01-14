@@ -22,7 +22,7 @@ async def on_member_join(member):
     await client.send_message(member, 'Hello,I Hope You Will like Our Server')
     print('Sent message to ' + member.name)
     await client.change_presence(game=Game(name='Playing Fortnite'))
-    await client.change_presence(game=Game(name='fortnite'))
+    await client.change_presence(game=Game(name='Fortnite'))
     print('Ready') 
 
 
@@ -40,40 +40,33 @@ async def on_message(message):
         em = discord.Embed(description='SuperiorRup!!!!')
         em.set_image(url='https://ibb.co/zn3RZJk')
         await client.send_message(message.channel, embed=em)
-     
+    if message.content == 'ping':
+        await client.send_message(message.channel,'pong')
     if message.content == 'hey':
         await client.send_message(message.channel,'hello')
     if message.content == 'yo':
         await client.send_message(message.channel,'yo')
-    if message.author == client.user:
-        return
-
-    if message.content.startswith('+ping'):
-        msg = 'Pong!{0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-        
-
     if message.content == 'watsup':
         await client.send_message(message.channel,'sky')
     if message.content == 'who is your master':
         await client.send_message(message.channel,'SuperiorRup')
-    if message.content.startswith('+flipcoin'):
+    if message.content.startswith('!flipcoin'):
         randomlist = ['Head','tail']
         await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content.startswith('+what should i play'):
+    if message.content.startswith('!what should i play'):
         randomlist = ['fortnite','cs:go','pubg','nothing']
         await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content == '+fact1':
+    if message.content == '!fact1':
         await client.send_message(message.channel,'Rup real hair colour is black')
-    if message.content == '+fact2':
+    if message.content == '!fact2':
         await client.send_message(message.channel,'Rup is very Lazy')
-    if message.content == '+fact3':
+    if message.content == '!fact3':
         await client.send_message(message.channel,'Rup favorite food is Fast food')
-    if message.content == '+fact4':
+    if message.content == '!fact4':
         await client.send_message(message.channel,'Rup loves pizza')
-    if message.content == '+fact5':
+    if message.content == '!fact5':
         await client.send_message(message.channel,'Rup is working on new video')
-    if message.content == '+what rup is doing':
+    if message.content == 'what rup is doing':
         await client.send_message(message.channel,'Creating new videos for you guys')
     if message.content == 'SUBS4SUBS':
         em = discord.Embed(description='')
@@ -85,8 +78,19 @@ async def on_message(message):
        await client.delete_message(message)
     if ('subs4subs') in message.content:
        await client.delete_message(message)
-    if ('dumbass') in message.content:
-        await client.delete_message(message)
-
+    if message.content == '!trool me':
+        em = discord.Embed(description='LOL')
+        em.set_image(url='https://cdn.discordapp.com/attachments/528873517157056532/530968846635630609/Troll_face.png')
+        await client.send_message(message.channel, embed=em)
+    if message.content == '!lol':
+        em = discord.Embed(description='Laugh Out Laugh')
+        em.set_image(url='https://cdn.discordapp.com/attachments/528873517157056532/530968826838515713/meme-png-me-gusta-meme-png-png-image-997.png')
+        await client.send_message(message.channel, embed=em)
+    if message.content == '!superior army':
+        em = discord.Embed(description='Laugh Out Laugh')
+        em.set_image(url='https://cdn.discordapp.com/attachments/528873517157056532/530968875052040242/Untitled-1.png')
+        await client.send_message(message.channel, embed=em)
+    if message.content.startswith('!what rup is doing'):
+        randomlist = ['Nothing','Creating Video','Free']
+        await client.send_message(message.channel,(random.choice(randomlist)))
 client.run('NTI4NTA0MzMyMjYyMzA5ODg4.DwoIKQ.P9HY47BQ3wD5BtZz3JH6kUzOtwA')
-

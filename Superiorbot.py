@@ -88,4 +88,4 @@ async def on_message(message):
     if ('dumbass') in message.content:
         await client.delete_message(message)
         
-client.run('NTI4NTA0MzMyMjYyMzA5ODg4.DwoIKQ.P9HY47BQ3wD5BtZz3JH6kUzOtwA')
+client.run('NTI4NTA0MzMyMjYyMzA5ODg4.Dx4lxQ.MYAK2b1_ya9Y387MHlgxoa64onw')

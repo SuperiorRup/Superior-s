@@ -43,8 +43,8 @@ async def on_message(message):
      
     if message.content == 'hey':
         await client.send_message(message.channel,'hello')
-    if message.content == 'yo':
-        await client.send_message(message.channel,'Yo')
+    if message.content == 'Yo':
+        await client.send_message(message.channel,'hi')
     if message.author == client.user:
         return
 

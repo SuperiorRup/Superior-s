@@ -21,8 +21,8 @@ async def on_member_join(member):
     print('Recognised that a member called ' + member.name + ' joined')
     await client.send_message(member, 'Hello,I Hope You Will like Our Server')
     print('Sent message to ' + member.name)
-    await client.change_presence(game=Game(name='Playing Fortnite'))
-    await client.change_presence(game=Game(name='fortnite'))
+    await client.change_presence(game=Game(name='Watching YOUTUBE'))
+    await client.change_presence(game=Game(name='Youtube'))
     print('Ready') 
 
 

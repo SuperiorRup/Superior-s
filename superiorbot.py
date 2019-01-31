@@ -89,4 +89,11 @@ async def on_message(message):
        await client.delete_message(message)
     if ('dumbass') in message.content:
         await client.delete_message(message)
+        
+@client.event
+async def on_message(message):
+    if ('472722409095430144') in message.content:
+       msg = "{0.author.mention} Don't Ping My Boss.".format(message)
+       await client.send_message(message.channel, msg)
+
 client.run('NTM3NTgyMzAxMzEyMzE5NDkw.Dy68_A.ZbHplVBXgdVKXa2Kgfo_h4Y30tI')

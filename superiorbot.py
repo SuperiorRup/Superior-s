@@ -1,5 +1,3 @@
-client.remove command('help')    
-
 import discord
 from discord.ext.commands import Bot
 from discord.ext import commands
@@ -12,6 +10,8 @@ from discord import Game
 Client = discord.client
 client = commands.Bot(command_prefix = '+')
 Clientdiscord = discord.Client()
+
+client.remove command('+help')
 
 @client.event
 async def on_message(message):

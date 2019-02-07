@@ -14,22 +14,7 @@ Clientdiscord = discord.Client()
 client.remove command('+help')
 
 @client.event
-async def on_message(message):
-    if ('472722409095430144') in message.content:
-       msg = "{0.author.mention} Don't Ping My Boss.".format(message)
-       await client.send_message(message.channel, msg)
-        
-@client.event
-async def on_member_join(member):
-    print('Recognised that a member called ' + member.name + ' joined')
-    await client.send_message(member, 'A New Wild Member Appeared')
-    print('Sent message to ' + member.name)
-    await client.change_presence(game=Game(name='Playing Camshitstudio'))
-    print('Recognised that a member called ' + member.name + ' joined')
-    await client.send_message(member, 'Hello,I Hope You Will like Our Server')
-    print('Sent message to ' + member.name)
-    await client.change_presence(game=Game(name='Watching YOUTUBE'))
-    await client.change_presence(game=Game(name='WATCHING Superior Videos'))
+async def on_member_join():
     print('Ready')
     print ("Starting up")
     await client.change_presence(game=discord.Game(name=";help", type=1))
@@ -41,7 +26,6 @@ async def on_member_join(member):
     await client.change_presence(game=discord.Game(name="In 1 Server", type=4))
     print ("Started")
     await client.change_presence(game=discord.Game(name="Fortnite", type=3))
-
 
 @client.event
 async def on_message(message):
@@ -219,5 +203,6 @@ async def unban(ctx, userName: discord.User):
         await client.say(embed=embed)
     else:
         embed=discord.Embed(title="Command not accepted!", description="Sorry! You don't have permission to use this command.", color=0xff00f6)
-        await client.say(embed=embed)     
+        await client.say(embed=embed)
+        
 client.run('NTQyNjQ5MjA0MTQxNDU3NDA5.DzxFYA.U6-42w6Yftv6COYALUuWLmye2SA')

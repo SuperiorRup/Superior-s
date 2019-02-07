@@ -205,4 +205,4 @@ async def unban(ctx, userName: discord.User):
         embed=discord.Embed(title="Command not accepted!", description="Sorry! You don't have permission to use this command.", color=0xff00f6)
         await client.say(embed=embed)
         
-client.run('NTQyNjQ5MjA0MTQxNDU3NDA5.DzxFYA.U6-42w6Yftv6COYALUuWLmye2SA')
+client.run('NTQyOTE4ODY4NTI0MzM1MTE2.Dz1ArA.FCNR0hO3IMTl_pA9x99IjCGCIEE')

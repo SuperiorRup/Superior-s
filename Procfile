@@ -1,1 +1,1 @@
-worker: python superiorbot.py
+worker: python XxZeonxX.py
